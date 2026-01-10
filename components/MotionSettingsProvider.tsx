@@ -57,7 +57,7 @@ export function MotionSettingsProvider({ children }: { children: React.ReactNode
       distance: settings.distance,
       scale: settings.scale,
       density: settings.density,
-      reducedMotion: prefersReducedMotion
+      reducedMotion: prefersReducedMotion ?? false
     };
   }, [intensity, prefersReducedMotion]);
 

@@ -7,9 +7,13 @@ import { fadeUp, stagger } from "@/lib/motion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { BrandIcon } from "@/components/icons/BrandIcon";
 import { CountUp } from "@/components/CountUp";
+import { brandIcons, type BrandIconName } from "@/lib/brandIcons";
 import { cn } from "@/lib/utils";
 
 type ExperienceItem = (typeof profile.experience)[number];
+
+const isBrandIconName = (icon?: string): icon is BrandIconName =>
+  !!icon && icon in brandIcons;
 
 export function TimelineMissionLog({ items = profile.experience }: { items?: ExperienceItem[] }) {
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
@@ -116,7 +120,11 @@ export function TimelineMissionLog({ items = profile.experience }: { items?: Exp
                                 key={tool.name}
                                 className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-xs text-text"
                               >
-                                <BrandIcon name={tool.icon} title={tool.name} className="h-4 w-4" />
+                                <BrandIcon
+                                  name={isBrandIconName(tool.icon) ? tool.icon : undefined}
+                                  title={tool.name}
+                                  className="h-4 w-4"
+                                />
                                 {tool.name}
                               </span>
                             ))}
