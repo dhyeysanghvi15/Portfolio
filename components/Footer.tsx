@@ -1,32 +1,3 @@
+import Link from "next/link";
 import { profile } from "@/data/profile";
-
-export function Footer() {
-  return (
-    <footer className="border-t border-border py-10">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 text-sm text-muted md:flex-row md:items-center md:justify-between">
-        <p>Built for curiosity, resilience, and clean telemetry.</p>
-        <div className="flex items-center gap-4">
-          <a
-            href={profile.contact.github}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-accent"
-          >
-            GitHub
-          </a>
-          <a
-            href={profile.contact.linkedin}
-            target="_blank"
-            rel="noreferrer"
-            className="hover:text-accent"
-          >
-            LinkedIn
-          </a>
-          <a href={`mailto:${profile.contact.email}`} className="hover:text-accent">
-            Email
-          </a>
-        </div>
-      </div>
-    </footer>
-  );
-}
+export function Footer(){return <footer className="site-footer"><div className="page-shell footer-inner"><div><Link href="/" className="footer-name">Dhyey Sanghvi<span>.</span></Link><p>Cloud security. Thoughtful engineering.</p></div><div className="footer-links"><Link href="/resume">Resume</Link><a href={profile.contact.linkedin}>LinkedIn ↗</a><a href={profile.contact.github}>GitHub ↗</a><Link href="/contact">Contact</Link></div><p className="copyright">© {new Date().getFullYear()} Dhyey Sanghvi</p></div></footer>;}

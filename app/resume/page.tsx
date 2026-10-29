@@ -4,7 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 export default function ResumePage() {
   return (
-    <main className="mx-auto max-w-5xl px-4 py-20">
+    <main id="content" className="mx-auto max-w-5xl px-4 py-20">
       <SectionHeading
         eyebrow="Resume"
         title="Resume PDF"
@@ -13,7 +13,7 @@ export default function ResumePage() {
       <div className="mb-8 flex flex-wrap items-center gap-4">
         <Link
           href="/resume.pdf"
-          className="rounded-full bg-accent px-6 py-3 text-base font-medium text-base shadow-glow"
+          className="rounded-full button-primary"
         >
           Download resume
         </Link>

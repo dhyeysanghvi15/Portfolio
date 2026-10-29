@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/"
     },
-    sitemap: "https://dhyey-portfolio.vercel.app/sitemap.xml"
+    sitemap: "https://dhyeysanghvi.com/sitemap.xml"
   };
 }

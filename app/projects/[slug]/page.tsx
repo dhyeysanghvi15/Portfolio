@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { profile } from "@/data/profile";
 
@@ -18,24 +18,15 @@ export default function ProjectDetailPage({
   }
 
   return (
-    <main className="mx-auto max-w-4xl px-4 py-20">
+    <main id="content" className="mx-auto max-w-4xl px-4 py-20">
+      <Link href="/projects" className="text-link inline-block mb-8">← All projects</Link>
       <p className="text-xs uppercase tracking-[0.35em] text-muted">Case study</p>
       <h1 className="mt-4 text-4xl font-semibold md:text-5xl">
         {project.title}
       </h1>
       <p className="mt-4 text-lg text-muted">{project.summary}</p>
 
-      <div className="relative mt-10 overflow-hidden rounded-2xl border border-border">
-        <Image
-          src="/placeholder.svg"
-          alt="Project screenshot placeholder"
-          width={1200}
-          height={800}
-          className="h-auto w-full"
-          priority
-        />
-      </div>
-
+      <div className="mt-8 tag-row">{project.stack.map(tech => <span key={tech}>{tech}</span>)}</div>
       <div className="mt-10 grid gap-8">
         <section className="glass rounded-2xl border border-border p-6">
           <h2 className="text-xl font-semibold">Problem</h2>

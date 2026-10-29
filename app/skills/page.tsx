@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import { profile } from "@/data/profile";
+import { PageIntro } from "@/components/PageIntro";
+export const metadata: Metadata = { title: "Skills | Dhyey Sanghvi" };
+export default function SkillsPage(){return <main id="content" className="page-shell"><PageIntro eyebrow="Technical toolkit" title="The tools behind the work." description="Technologies and practices I use across security operations, cloud infrastructure, software development, and analytics."/><div className="skills-grid">{Object.entries(profile.skills).map(([group,items])=><section className="skill-card" key={group}><h2>{group}</h2><div className="tag-row">{items.map(item=><span key={item.name}>{item.name}</span>)}</div></section>)}<section className="skill-card"><h2>Enterprise integrations & AI security</h2><div className="tag-row">{["Salesforce CRM","OAuth 2.0","REST APIs","RAG architectures","Prompt injection research","AI guardrails","NIST/CIS principles"].map(s=><span key={s}>{s}</span>)}</div></section></div></main>;}

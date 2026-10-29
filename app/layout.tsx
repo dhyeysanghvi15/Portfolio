@@ -6,8 +6,6 @@ import { MotionSettingsProvider } from "@/components/MotionSettingsProvider";
 import { SkipLink } from "@/components/SkipLink";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
-import { ScrollProgress } from "@/components/ScrollProgress";
-import { TechVideoBackground } from "@/components/TechVideoBackground";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -27,7 +25,7 @@ export const metadata: Metadata = {
     title: "Dhyey Sanghvi | Cybersecurity Portfolio",
     description:
       "AWS-first cloud security experience with measurable impact across telemetry, detection, and compliance.",
-    url: "https://dhyey-portfolio.vercel.app",
+    url: "https://dhyeysanghvi.com",
     siteName: "Dhyey Sanghvi",
     type: "website"
   },
@@ -49,8 +47,8 @@ export default function RootLayout({
       <body className="font-body">
         <ThemeProvider>
           <MotionSettingsProvider>
-            <TechVideoBackground />
-            <ScrollProgress />
+
+
             <SkipLink />
             <Nav />
             {children}

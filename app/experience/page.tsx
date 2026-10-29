@@ -1,0 +1,5 @@
+import type { Metadata } from "next";
+import { profile } from "@/data/profile";
+import { PageIntro } from "@/components/PageIntro";
+export const metadata: Metadata = { title: "Experience | Dhyey Sanghvi" };
+export default function ExperiencePage() { return <main id="content" className="page-shell"><PageIntro eyebrow="Professional experience" title="Practical work. Measurable impact." description="My experience across cloud security, enterprise integrations, security operations, and data automation."/><div className="experience-list">{profile.experience.map((item,index)=><article className="experience-entry" key={item.company}><div className="experience-meta"><p className="eyebrow">{index===0 ? "Current role" : "Previous experience"}</p><p>{item.dates}</p><p>{item.location}</p></div><div className="experience-body"><h2>{item.role}</h2><p className="company-name">{item.company}</p><ul>{item.highlights.map(h=><li key={h}>{h}</li>)}</ul><div className="tag-row">{item.tools.map(t=><span key={t.name}>{t.name}</span>)}</div></div></article>)}</div></main>; }
