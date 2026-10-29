@@ -1,11 +1,11 @@
 export const profile = {
   name: "Dhyey Sanghvi",
-  role: "Cybersecurity Student",
+  role: "Cybersecurity Graduate",
   positioning: {
     headline:
-      "AWS-first security, Cybersecurity & Cloud Security student building secure, scalable software—automating detections, hardening AWS environments, and using data engineering + AI to turn telemetry into real-world security outcomes.",
+      "AWS-first security, Cybersecurity & Cloud Security graduate building secure, scalable software—automating detections, hardening AWS environments, and using data engineering + AI to turn telemetry into real-world security outcomes.",
     subhead:
-      "Cybersecurity & Cloud Security Student | Secure Software • AWS Hardening • Detection Automation • Data + AI"
+      "Cybersecurity & Cloud Security Graduate | Secure Software • AWS Hardening • Detection Automation • Data + AI"
   },
   contact: {
     phone: "+1 623-206-9860",
@@ -42,6 +42,27 @@ export const profile = {
     { label: "Daily log volume", value: "50GB+" }
   ],
   experience: [
+    {
+      company: "CloudFountain Inc.",
+      role: "Cybersecurity and AI Engineer Intern",
+      location: "Belmont, MA",
+      dates: "Jul 2026 - Present",
+      tools: [
+        { name: "Salesforce CRM" },
+        { name: "OAuth 2.0" },
+        { name: "REST APIs" },
+        { name: "IAM", icon: "iam" },
+        { name: "AI / RAG" },
+        { name: "NIST/CIS Controls", icon: "cisnist" }
+      ],
+      highlights: [
+        "Configured and tested Salesforce CRM integrations using OAuth 2.0, REST APIs, and scoped permissions for Account and Opportunity objects; validated authenticated data retrieval and record-management workflows in a development environment.",
+        "Evaluated Opportunity stage controls, validation requirements, and notification workflows; documented business rules and secure automation designs for controlled record updates and consistent data handling.",
+        "Supported cloud security and IAM reviews covering authentication, least-privilege permissions, API exposure, and configuration risks; documented findings and remediation recommendations aligned with NIST/CIS principles.",
+        "Researched AI security and RAG architectures, including prompt injection, data leakage controls, model evaluation, and guardrails; developed technical documentation and integration recommendations."
+      ],
+      metrics: ["OAuth 2.0 integrations", "Least-privilege access", "NIST/CIS reviews", "AI security research"]
+    },
     {
       company: "Projacs International",
       role: "Cybersecurity Analyst Intern",

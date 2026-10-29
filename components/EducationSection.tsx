@@ -22,6 +22,9 @@ export function EducationSection() {
           Minor in {profile.education.minor} & Certificate in {profile.education.certificate}
         </p>
         <p className="mt-1">{profile.education.dates}</p>
+        <p className="mt-2 font-medium text-accent">
+          Graduated {profile.education.graduation}
+        </p>
         <p className="mt-3">{profile.education.activities}</p>
         <div className="mt-4 flex flex-wrap gap-2 text-xs">
           {profile.education.skills.map((skill) => (

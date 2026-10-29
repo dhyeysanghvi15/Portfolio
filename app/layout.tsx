@@ -22,7 +22,7 @@ const jetbrains = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Dhyey Sanghvi | Cybersecurity Portfolio",
   description:
-    "Cybersecurity student specializing in AWS-first cloud security, zero-trust data lakes, and SIEM pipelines.",
+    "Cybersecurity graduate specializing in AWS-first cloud security, zero-trust data lakes, and SIEM pipelines.",
   openGraph: {
     title: "Dhyey Sanghvi | Cybersecurity Portfolio",
     description:
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Dhyey Sanghvi | Cybersecurity Portfolio",
     description:
-      "Cybersecurity student focused on cloud data pipelines, detection engineering, and secure automation."
+      "Cybersecurity graduate focused on cloud data pipelines, detection engineering, and secure automation."
   }
 };
 
